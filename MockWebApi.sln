@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockWebApi", "MockWebApi\MockWebApi.csproj", "{EC627FE3-8849-41B5-8F63-2CA7A4CB5806}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mock.Domain", "Mock.Domain\Mock.Domain.csproj", "{626A1FC1-9F39-448B-AD26-76CD568E7EAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mock.Application", "Mock.Application\Mock.Application.csproj", "{16F00EA5-2307-4B3D-A097-A8423186080D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC627FE3-8849-41B5-8F63-2CA7A4CB5806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC627FE3-8849-41B5-8F63-2CA7A4CB5806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC627FE3-8849-41B5-8F63-2CA7A4CB5806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC627FE3-8849-41B5-8F63-2CA7A4CB5806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{626A1FC1-9F39-448B-AD26-76CD568E7EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{626A1FC1-9F39-448B-AD26-76CD568E7EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{626A1FC1-9F39-448B-AD26-76CD568E7EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{626A1FC1-9F39-448B-AD26-76CD568E7EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16F00EA5-2307-4B3D-A097-A8423186080D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16F00EA5-2307-4B3D-A097-A8423186080D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16F00EA5-2307-4B3D-A097-A8423186080D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16F00EA5-2307-4B3D-A097-A8423186080D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
