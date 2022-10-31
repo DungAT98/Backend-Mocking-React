@@ -21,7 +21,7 @@ public static class JwtHelper
                 new Claim("Id", Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Sub, username),
             }),
-            Expires = DateTime.UtcNow.AddMinutes(5),
+            Expires = DateTime.UtcNow.AddDays(5),
             Issuer = issuer,
             Audience = audience,
             SigningCredentials =

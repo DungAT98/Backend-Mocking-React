@@ -21,7 +21,7 @@ public class CategoryController : ControllerBase
     }
 
     [HttpGet("{id:guid}")]
-    public Task<IActionResult> GetByIdAsync([FromQuery] Guid id)
+    public Task<IActionResult> GetByIdAsync(Guid id)
     {
         var entity = _unitOfWork.CategoryRepository.GetById(id);
         if (entity == null)
@@ -69,8 +69,8 @@ public class CategoryController : ControllerBase
         return isSuccess ? Ok(entity.Id) : BadRequest();
     }
 
-    [HttpDelete]
-    public async Task<IActionResult> DeleteAsync([FromBody] Guid id)
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> DeleteAsync(Guid id)
     {
         _unitOfWork.CategoryRepository.Delete(id);
 
