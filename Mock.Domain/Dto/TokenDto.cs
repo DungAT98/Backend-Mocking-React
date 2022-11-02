@@ -4,5 +4,7 @@ public class TokenDto
 {
     public string Token { get; set; } = default!;
 
-    public DateTime? ExpiredIn { get; set; } 
+    public string RefreshToken { get; set; } = default!;
+
+    public DateTime RefreshTokenExpiredIn { get; set; }
 }

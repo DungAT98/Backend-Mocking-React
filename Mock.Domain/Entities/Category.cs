@@ -2,7 +2,7 @@
 
 namespace Mock.Domain.Entities;
 
-public class Category: EntityBase
+public class Category : EntityBase
 {
     public string Name { get; set; } = default!;
 

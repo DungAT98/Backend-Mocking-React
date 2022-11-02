@@ -2,16 +2,19 @@
 
 public class BasePaginatedResult<TModel>
 {
+    private int _pageNumber = 1;
+
+    private int _pageSize = 10;
+
     public BasePaginatedResult()
     {
-        
     }
 
     public BasePaginatedResult(IQueryable<TModel> query, BaseSearchCommand command)
     {
         GetData(query, command);
     }
-    
+
     public int TotalItems { get; set; }
 
     public int TotalPage => (int)Math.Ceiling(TotalItems * 1.0 / PageSize);
@@ -30,8 +33,6 @@ public class BasePaginatedResult<TModel>
         }
     }
 
-    private int _pageNumber = 1;
-
     public int PageSize
     {
         get => _pageSize;
@@ -45,8 +46,6 @@ public class BasePaginatedResult<TModel>
             _pageSize = value;
         }
     }
-
-    private int _pageSize = 10;
 
     public List<TModel> Data { get; set; } = new();
 

@@ -7,14 +7,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
-      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
-      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.10.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.10.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Mock.Domain\Mock.Domain.csproj" />
+        <ProjectReference Include="..\Mock.Domain\Mock.Domain.csproj" />
     </ItemGroup>
 
 </Project>

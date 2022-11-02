@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Mock.Application.Repositories;
 using Mock.Domain.Abstractions;
 using Mock.Domain.Commands;
-using Mock.Domain.Dto;
 using Mock.Domain.Entities;
 
 namespace MockWebApi.Controllers;

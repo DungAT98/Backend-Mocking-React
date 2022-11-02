@@ -15,7 +15,7 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
         _context = context;
         _dbSet = context.Set<TEntity>();
     }
-    
+
     public void Add(TEntity entity)
     {
         entity.CreatedTime = DateTime.Now;
@@ -29,7 +29,7 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
         if (isHardDelete)
         {
             _dbSet.Remove(entity);
-            _context.Entry(entity).State = EntityState.Deleted;    
+            _context.Entry(entity).State = EntityState.Deleted;
         }
         else
         {

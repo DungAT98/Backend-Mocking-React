@@ -8,6 +8,7 @@ using Mock.Application.Databases;
 using Mock.Application.Repositories;
 using Mock.Application.Services;
 using Mock.Domain.Configurations;
+using Mock.Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,10 +44,10 @@ builder.Services.AddSwaggerGen(option =>
     });
 });
 builder.Services.AddDbContext<MockContext>(option => { option.UseInMemoryDatabase("MockDbContext"); });
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<MockContext>()
-    .AddUserManager<UserManager<IdentityUser>>()
-    .AddSignInManager<SignInManager<IdentityUser>>();
+    .AddUserManager<UserManager<ApplicationUser>>()
+    .AddSignInManager<SignInManager<ApplicationUser>>();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -63,7 +64,7 @@ builder.Services.AddAuthentication(options =>
             (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
         ValidateIssuer = true,
         ValidateAudience = true,
-        ValidateLifetime = false,
+        ValidateLifetime = true,
         ValidateIssuerSigningKey = true
     };
 });

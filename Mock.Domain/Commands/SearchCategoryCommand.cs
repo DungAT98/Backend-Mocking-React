@@ -4,5 +4,4 @@ namespace Mock.Domain.Commands;
 
 public class SearchCategoryCommand : BaseSearchCommand
 {
-
 }

@@ -8,16 +8,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.10" />
-        <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.10" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.10"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.10"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Mock.Application\Mock.Application.csproj" />
-      <ProjectReference Include="..\Mock.Domain\Mock.Domain.csproj" />
+        <ProjectReference Include="..\Mock.Application\Mock.Application.csproj"/>
+        <ProjectReference Include="..\Mock.Domain\Mock.Domain.csproj"/>
     </ItemGroup>
 
 </Project>

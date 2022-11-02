@@ -7,6 +7,6 @@ public abstract class EntityBase : ISoftDelete
     public DateTime CreatedTime { get; set; }
 
     public DateTime ModifiedTime { get; set; }
-    
+
     public bool IsDeleted { get; set; }
 }

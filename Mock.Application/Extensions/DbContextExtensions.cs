@@ -14,14 +14,13 @@ public static class DbContextExtensions
             if (entityType.ClrType.GetInterface(typeof(TInterface).Name) != null)
             {
                 var newParam = Expression.Parameter(entityType.ClrType);
-                var newbody = ReplacingExpressionVisitor.
-                    Replace(expression.Parameters.Single(), newParam, expression.Body);
-                modelBuilder.Entity(entityType.ClrType).
-                    HasQueryFilter(Expression.Lambda(newbody, newParam));
+                var newbody =
+                    ReplacingExpressionVisitor.Replace(expression.Parameters.Single(), newParam, expression.Body);
+                modelBuilder.Entity(entityType.ClrType).HasQueryFilter(Expression.Lambda(newbody, newParam));
             }
         }
     }
-    
+
     public static void ApplyGlobalFilters<T>(this ModelBuilder modelBuilder,
         string propertyName, T value)
     {
@@ -31,9 +30,8 @@ public static class DbContextExtensions
             if (foundProperty != null && foundProperty.ClrType == typeof(T))
             {
                 var newParam = Expression.Parameter(entityType.ClrType);
-                var filter = Expression.
-                    Lambda(Expression.Equal(Expression.Property(newParam, propertyName),
-                        Expression.Constant(value)), newParam);
+                var filter = Expression.Lambda(Expression.Equal(Expression.Property(newParam, propertyName),
+                    Expression.Constant(value)), newParam);
                 modelBuilder.Entity(entityType.ClrType).HasQueryFilter(filter);
             }
         }
